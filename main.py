@@ -7,8 +7,12 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 
 app = FastAPI()
 
+# Load your modelfrom tensorflow.keras.models import load_model
+
 # Load your model
-model = load_model("ResNet50_model.h5")
+model = load_model(r"D:\Projects\Skin disease classification\SkinDiseaseModelDeploy\skin_disease_model.keras")
+
+
 
 # Define your class labels
 class_labels = ['Acne and Rosacea Photos', 'Atopic Dermatitis Photos', 'Basal Cell Carcinoma (BCC)', 'Benign Keratosis-like Lesions (BKL)', 'Melanocytic Nevi (NV)', 'Nail Fungus and other Nail Disease']
